@@ -1,0 +1,4 @@
+1727 [main] INFO  p.tests.TestBaseLesson16 - Start test testLoginFormWithInvalidPwdNegative
+1740 [main] INFO  p.tests.TestBaseLesson16 - **********************
+23305 [main] INFO  p.tests.TestBaseLesson16 - Stop test testLoginFormWithInvalidPwdNegative by Tamara
+23306 [main] INFO  p.tests.TestBaseLesson16 - **********************

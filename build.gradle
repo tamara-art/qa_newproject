@@ -1,0 +1,53 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    implementation 'org.testng:testng:7.4.0'
+    implementation 'ch.qos.logback:logback-classic:1.4.3'
+    implementation 'com.github.stephenc.monte:monte-screen-recorder:0.7.7.0'
+}
+
+task smokyTest (type: Test) {
+    useTestNG()
+}
+
+task testy (type: Test) {
+    useTestNG()
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
+}
+
+task testUser (type: Test){
+    useTestNG(){
+        suites 'src/test/resources/testngUser.xml'
+    }
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
+}
+
+task testSmoky (type: Test){
+    useTestNG(){
+        suites 'src/test/resources/testngSmoky.xml'
+    }
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
+}
+
+
+
+
+    test {
+        useJUnitPlatform()
+    }

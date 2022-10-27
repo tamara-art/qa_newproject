@@ -1,0 +1,4 @@
+1640 [main] INFO  p.tests.TestBaseLesson16 - Start test testLoginFormWithInvalidEmailNegative
+1658 [main] INFO  p.tests.TestBaseLesson16 - **********************
+26069 [main] INFO  p.tests.TestBaseLesson16 - Stop test testLoginFormWithInvalidEmailNegative by Tamara
+26070 [main] INFO  p.tests.TestBaseLesson16 - **********************
